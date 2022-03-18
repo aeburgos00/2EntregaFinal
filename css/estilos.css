@@ -57,6 +57,48 @@ h1 {
     display: none;
 }
 
+/* ANIMACIONES */
+
+@keyframes logo_giratorio {
+    0%{}
+    25%{
+        transform: rotate(90deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    75%{
+        transform: rotate(270deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes logo_movedizo {
+    0%{}
+    25% {
+        transform: translate(20px, 0);
+    }
+    50%{
+        transform: translate(0, 0);
+    }
+    75%{
+        transform: translate(-20px, 0);
+    }
+    100%{
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes desaparecer {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+}
 
 /*MEDIA QUERIE MOBILE intervalo de 0px ---> 768px*/
 @media only screen and (max-width: 768px)
@@ -78,6 +120,11 @@ h1 {
         display: flex;
         justify-content: center;
         align-items: center;
+        animation-name: logo_giratorio;
+        animation-iteration-count: infinite;
+        animation-timing-function:linear;
+        animation-duration: 4s;
+        animation-delay: 1s;
     }
     .header__busqueda {
         grid-area: busqueda;
@@ -217,6 +264,12 @@ h1 {
         font-weight: 500;
         color: var(--violeta);
     }
+    .footer__derechos nav ul li:hover {
+        background-color: var(--violeta);
+    }
+    .footer__derechos nav ul li a:hover {
+        color: var(--amarillo);
+    }
     .footer__derechos ul {
         margin: 20px 0;
         padding: 0;
@@ -308,6 +361,10 @@ h1 {
         text-shadow: 0 0 10px var(--amarillo);
         text-align: center;
         margin-bottom: 10px;
+        animation-name: desaparecer;
+        animation-iteration-count: infinite;
+        animation-delay: 1s;
+        animation-duration: 3s;
     }
     .boton__principal {
         display: flex;
@@ -359,6 +416,9 @@ h1 {
     .prod2, .prod3 {
         display: none;
     }
+    .prod1:hover{
+        width: 65%;
+    }
     .cardProducto__img {
         /* width: 200px;
         height: 280px; */
@@ -401,6 +461,9 @@ h1 {
     }
     .sucur2, .sucur3 {
         display: none;
+    }
+    .sucur1:hover {
+        width: 90%;
     }
     .contenedor__imagenSucursal {
         width: 70%;
@@ -500,6 +563,11 @@ h1 {
         display: flex;
         justify-content: center;
         align-items: center;
+        animation-name: logo_giratorio;
+        animation-iteration-count: infinite;
+        animation-timing-function:linear;
+        animation-duration: 4s;
+        animation-delay: 1s;
     }
     .header__busqueda {
         grid-area: busqueda;
@@ -640,7 +708,13 @@ h1 {
         margin: 20px 0;
         padding: 0;
     }
-    
+    .footer__derechos nav ul li:hover {
+        background-color: var(--violeta);
+    }
+    .footer__derechos nav ul li a:hover {
+        color: var(--amarillo);
+    }
+
     /* --    HOME    -- */
     
     .contenedor-main {
@@ -718,6 +792,10 @@ h1 {
         text-shadow: 0 0 10px var(--amarillo);
         text-align: center;
         margin-bottom: 20px;
+        animation-name: desaparecer;
+        animation-iteration-count: infinite;
+        animation-delay: 1s;
+        animation-duration: 3s;
     }
     .boton__principal {
         display: flex;
@@ -774,6 +852,9 @@ h1 {
     .prod3 {
         display: none;
     }
+    .prod1:hover, .prod2:hover{
+        width: 50%;
+    }
     .cardProducto__img {
         width: 80%;
         height: auto;
@@ -818,6 +899,9 @@ h1 {
     }
     .sucur3 {
         display: none;
+    }
+    .sucur1:hover, .sucur2:hover {
+        width: 100%;
     }
     .contenedor__imagenSucursal {
         width: 90%;
@@ -910,6 +994,11 @@ h1 {
         display: flex;
         justify-content: center;
         align-items: center;
+        animation-name: logo_movedizo;
+        animation-iteration-count: infinite;
+        animation-timing-function:linear;
+        animation-duration: 4s;
+        animation-delay: 1s;
     }
     .header__logo--mobile {
         display: none;
@@ -985,11 +1074,19 @@ h1 {
         display: flex;
         justify-content: center;
     }
+    .header__nav li:hover {
+        background-color: var(--violetaOscuro);
+        height: 56px;
+        align-items: center;
+    }
     .nav__item--tipografia {
         color: var(--blanco);
         font-weight: bold;
         font-size: 20px;
         /* font-size: 1.8vw; */
+    }
+    .nav__item--tipografia:hover {
+        color: var(--amarilloClaro);
     }
 
     /*--- TITULOS ---*/
@@ -1113,6 +1210,10 @@ h1 {
         text-shadow: 0 0 10px var(--amarillo);
         text-align: center;
         margin-bottom: 20px;
+        animation-name: desaparecer;
+        animation-iteration-count: infinite;
+        animation-delay: 1s;
+        animation-duration: 3s;
     }
     .boton__principal {
         background: var(--amarillo);
@@ -1173,6 +1274,9 @@ h1 {
         justify-content: center;
         align-items: center;
     }
+    .prod1:hover, .prod2:hover, .prod3:hover {
+        width: 35%;
+    }
     .cardProducto__img {
         /* width: 200px;
         height: 280px; */
@@ -1214,6 +1318,9 @@ h1 {
         border-radius: 5px;
         padding: 0 15px;
         margin: 40px 0;*/
+    }
+    .sucur1:hover, .sucur2:hover, .sucur3:hover {
+        width: 35%;
     }
     .contenedor__imagenSucursal {
         width: 90%;
